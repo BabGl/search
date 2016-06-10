@@ -1,0 +1,130 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+$navbar-default-bg:#000000 ;
+$light-black:#000000;
+
+///@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+ #logo {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   float: left;
+   margin-right: 50px;
+   font-size: 2em;
+  // color:#fff;
+  background-color: #000000 ;
+  // text-transform: uppercase;
+   letter-spacing: -1px;
+   padding-top: 9px;
+   font-weight: bold;
+   border: 0px;
+   
+ }
+ #logo:hover   {
+   color:white;
+   text-decoration: none ;
+ }
+ 
+ login_ic {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   float: right;
+ margin-left: 10px;
+   font-size: 1.5em;
+   
+  color:white;
+  letter-spacing: -2px;
+   padding-top: 9px;
+ }
+ 
+ body {
+   padding-top:100px ;
+ }
+ 
+ #nav_item{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   float: left;
+   margin-right: 10px;
+   font-size: 1.5em;
+   color:#fff;
+  // background-color: #FF0000 ;
+  // text-transform: uppercase;
+   letter-spacing: -1px;
+   padding-top: 9px;
+    
+   font-weight: bold;
+   text-align:center;
+
+     }
+ #destroy_recept {
+  
+  float: left;
+  margin-right: 10px;
+   font-size: 1.5em;
+   text-align:left;
+ }
+ 
+ .center {
+   text-align:center;
+ }
+ 
+ h1, h2, h3, h4 {
+   line-height: 1;
+ }
+ 
+ h1{
+   font-size: 3em;
+   letter-spacing: -2px;
+   margin-bottom: 30px;
+   margin-top: 50px;
+   text-align: center;
+ }
+ 
+ h2{
+   font-size: 1.2em;
+   margin-bottom: 30px;
+   text-align: center;
+   font-weight: normal;
+   color: #777;
+ }
+ .footer {
+   margin-top: 25px;
+   border-top:1px solid #000000;
+   color:#000000;
+ }
+ 
+ 
+ 
+ .well {
+  background-color: #EDEDED;
+ }
+ 
+ input, textarea, select, .udeditable-input {
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+ }
+ 
+ input {
+  height: auto !important;
+ }
+
+  
+span.picture {
+  margin-top: 10px
+  input {
+  border:0;
+  }
+ }
+ 
+ .show_recipe {
+  margin: 10px 10px 10px 10px
+  }
