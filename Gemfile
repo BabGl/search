@@ -50,3 +50,4 @@ gem 'bootstrap-sass', '~> 3.3.6'
 group :production do
 gem 'pg'
 end
+gem 'owlcarousel2-rails'
