@@ -22,13 +22,17 @@ $light-black:#000000;
   // text-transform: uppercase;
    letter-spacing: -1px;
    padding-top: 9px;
-   font-weight: bold;
+   
    border: 0px;
+   font-style: oblique;
+   font-variant: small-caps;
+   
    
  }
  #logo:hover   {
    color:white;
    text-decoration: none ;
+   
  }
  
  login_ic {
@@ -41,6 +45,7 @@ $light-black:#000000;
   color:white;
   letter-spacing: -2px;
    padding-top: 9px;
+   
  }
  
  body {
@@ -125,6 +130,6 @@ span.picture {
   }
  }
  
- .show_recipe {
-  margin: 10px 10px 10px 10px
+ .nv {
+    color: green;
   }
