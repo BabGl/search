@@ -6,8 +6,9 @@ class RecipeTest < ActiveSupport::TestCase
                                              # -------------------------------
 
     def setup
+     @chef = Chef.create(chefname: "baburi", email: "afghero@live.com")
        #Instence variabel maken
-       @recipe = Recipe.new(naam: "Aardappel-preisoep met taleggio", overzicht: "Dit gerecht zet je al op tafel vanaf €2,00 per persoon.", 
+       @recipe = @chef.recipes.build(naam: "Aardappel-preisoep met taleggio", overzicht: "Dit gerecht zet je al op tafel vanaf €2,00 per persoon.", 
        ingredient:"3 l kippen- of groentebouillon,", beschrijving: "Pel de uien en snij ze in grove stukken. De snijwijze is meestal niet zo belangrijk wanneer je soep maakt.")
     end
     
@@ -16,6 +17,11 @@ class RecipeTest < ActiveSupport::TestCase
           test "Recipe should be valid" do
               assert @recipe.valid?
           end
+          
+          test "chef_id should be present" do
+          @recipe.chef_id = nil
+          assert_not @recipe.valid?
+         end
           
           #Test: Naam moet geschreven zijn.
           #------------------------------------------------------------------------------
