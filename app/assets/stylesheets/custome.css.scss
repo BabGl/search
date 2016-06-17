@@ -102,9 +102,10 @@ $light-black:#000000;
    color: #777;
  }
  .footer {
-   margin-top: 25px;
-   border-top:1px solid #000000;
-   color:#000000;
+   border-top: 0.5px solid #000000;
+   color: #000000;
+    font-size: 100%;
+ 
  }
  
  
@@ -135,3 +136,10 @@ span.picture {
  .nv {
     color: green;
   }
+  
+  .chef_info {
+   margin-top:5px;
+   }
+  .gravatar {
+   border-radius: 10px;
+   }

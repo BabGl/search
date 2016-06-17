@@ -1,0 +1,42 @@
+
+   <h1><%=  @recipe.naam %></h1>
+
+<div class="row">
+<div class="col-md-2">
+
+    <div class="col-md-4 pull-right center"></div>
+    
+   
+    <section class="chef_info center">
+    <%= gravatar_for @recipe.chef, size:100 %>
+   <p>
+    <h5> Chefkok is: <%= @recipe.chef.chefname %> </h5>
+     </p>
+      </section>
+  </div>
+  
+     
+     
+    <div class="col-md-8" >
+    
+      <h3><%= @recipe.overzicht %></h3>
+      <div class="show_recipe">
+      </div>
+      
+  
+      <div class="well">
+       
+       <p>
+          <strong>Ingrediënten:</strong>
+        </p>
+       <%= @recipe.ingredient %>
+        <p>
+        <hr/>
+          <strong>Instructies:</strong>
+        </p>
+        <%= @recipe.beschrijving %>
+        <div class="pull-right">
+        <br>
+         </div> </div>
+        
+        <p> <%= link_to "Terug naar de receptenlijst", recipes_path, class:"btn btn-warning btn-small" %></p>
