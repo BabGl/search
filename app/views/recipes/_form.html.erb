@@ -1,11 +1,12 @@
 
 
-
+<%= render 'shared/errors', obj: @recipe %>
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
   
+ 
   <%= form_for @recipe, :html => { :multipart => true } do |f| %>
-  <%= f.label :Naam %>
+  <%= f.label :"Naam van recept" %>
   <%= f.text_field :naam %>
   
   <%= f.label :Overzicht %>

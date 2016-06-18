@@ -10,7 +10,7 @@
     <section class="chef_info center">
     <%= gravatar_for @recipe.chef, size:100 %>
    <p>
-    <h5> Chefkok is: <%= @recipe.chef.chefname %> </h5>
+    <h5> Chefkok: <%= @recipe.chef.chefname %> </h5>
      </p>
       </section>
   </div>
@@ -29,7 +29,7 @@
        <p>
           <strong>Ingrediënten:</strong>
         </p>
-       <%= @recipe.ingredient %>
+       <%= simple_format(@recipe.ingredient) %>
         <p>
         <hr/>
           <strong>Instructies:</strong>
@@ -38,5 +38,6 @@
         <div class="pull-right">
         <br>
          </div> </div>
-        
+            <%= link_to "Bewerk deze recept", edit_recipe_path(@recipe), class: "btn btn-success pull-right" %>
+
         <p> <%= link_to "Terug naar de receptenlijst", recipes_path, class:"btn btn-warning btn-small" %></p>

@@ -20,14 +20,26 @@ class RecipesController < ApplicationController
       flash[:success] = "Uw Recept is aangemaakt"
       redirect_to recipes_path
       elsif render :new
-  end
-      
+       end
+       
+       end
+   def edit
+        @recipe = Recipe.find(params[:id])
+   end
+  def update
+        @recipe = Recipe.find(params[:id])
+        if @recipe.update(recipe_params)
+        flash[:success] = "Uw Recept is bewerkt"
+        redirect_to recipes_path(@recipe)
+        else
+          render :edit
+        end
     end
     
      private 
      def recipe_params
     params.require(:recipe).permit(:naam,:overzicht, :ingredient,:beschrijving)
-    end
+     end
     
     
 end
