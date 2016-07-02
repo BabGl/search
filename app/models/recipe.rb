@@ -1,8 +1,15 @@
 class Recipe < ActiveRecord::Base
     
     
+#     def self.search(search)
+#   where("naam LIKE ?", "%#{search}%") 
+#   where("overzicht LIKE ?", "%#{search}%")
+# end
+
     
     belongs_to :chef
+        has_many :likes
+
     
     #   validates_presence_of :naam, :message => "van recept mag niet leeg zijn" 
     # validates :naam, :inclusion  => { :in => 5..100, :message => " van recept moet niet te kort of te lang zijn (minimum 5 tekens)" }
@@ -16,8 +23,16 @@ class Recipe < ActiveRecord::Base
     #     validates_presence_of :beschrijving, :message => "van recept mag niet leeg zijn" 
     # validates :beschrijving, :inclusion  => { :in => 20..500, :message => " van recept moet niet te kort of te lang zijn (minimum 20 tekens)" }
     
-    
-    
+     def thumbs_up_total
+         self.likes.where(like: true).size
+ 
+ end
+ 
+ def thumbs_down_total
+         self.likes.where(like: false).size
+
+ end
+
     
     
     validates :chef_id, presence: true 

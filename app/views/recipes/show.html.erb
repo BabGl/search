@@ -8,7 +8,7 @@
     
    
     <section class="chef_info center">
-    <%= gravatar_for @recipe.chef, size:100 %>
+    <%=link_to gravatar_for( @recipe.chef, size:100), chef_path(@recipe.chef) %>
    <p>
     <h5> Chefkok: <%= @recipe.chef.chefname %> </h5>
      </p>
@@ -22,8 +22,8 @@
       <h3><%= @recipe.overzicht %></h3>
       <div class="show_recipe">
        <%= image_tag(@recipe.picture.url, size: "400x300", class: "gravatar ") if @recipe.picture? %>
-      </div>
       
+
   
       <div class="well">
        
@@ -37,8 +37,19 @@
         </p>
         <%= @recipe.beschrijving %>
         <div class="pull-right">
+        <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+        
+      
+        <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp <%= @recipe.thumbs_up_total %>
+        <% end %> &nbsp &nbsp  &nbsp &nbsp 
+          <div class="pull-right">
+          <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-down"></i> &nbsp<%= @recipe.thumbs_down_total %>
+         <% end %>
         <br>
-         </div> </div>
+         </div> 
+         </div>
+         </div>
             <%= link_to "Bewerk deze recept", edit_recipe_path(@recipe), class: "btn btn-success pull-right" %>
 
         <p> <%= link_to "Terug naar de receptenlijst", recipes_path, class:"btn btn-warning btn-small" %></p>

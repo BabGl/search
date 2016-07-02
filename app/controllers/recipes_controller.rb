@@ -1,7 +1,10 @@
 class RecipesController < ApplicationController
  
  def index
-    @recipes = Recipe.all 
+        @recipes = Recipe.paginate(page: params[:page], per_page: 4)
+        
+        
+
  end
     
   def show
@@ -35,6 +38,19 @@ class RecipesController < ApplicationController
           render :edit
         end
     end
+    
+    def like
+   @recipe  = Recipe.find(params[:id])
+ Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
+ 
+
+  
+
+  redirect_to :back 
+ 
+
+  end
+    
     
      private 
      def recipe_params
