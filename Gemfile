@@ -58,3 +58,5 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem "will_paginate", "~> 3.0.4"
 
 gem 'bcrypt', '3.1.7'
+gem 'globalize', '~> 4.0.3'
+gem 'globalize-versioning', '~> 0.1.0'
