@@ -4,13 +4,13 @@
   <div class="well col-md-8 col-md-offset-2">
   
   <%= form_for @chef do |f| %>
-  <%= f.label :"Naam van recept" %>
+  <%= f.label :"Naam en Voornaam" %>
   <%= f.text_field :chefname %>
   
-  <%= f.label :email %>
+  <%= f.label :"E-mailadres" %>
   <%= f.email_field :email %>
   
-  <%= f.label :password %>
+  <%= f.label :Paswoord %>
   <%= f.password_field :password, row: 10%>
   
   

@@ -1,4 +1,8 @@
 class ChefsController < ApplicationController
+    
+    def index
+         @chefs = Chef.paginate(page: params[:page], per_page: 4)
+    end
     def new
     @chef = Chef.new
     end
@@ -6,7 +10,9 @@ class ChefsController < ApplicationController
     def create
     @chef = Chef.new(chef_params)
     if @chef.save
-        flash[:success] = "uw account is met succes gemaakt"
+        flash[:success] = "uw account is  gemaakt"
+    session[:chef_id] = @chef.id
+    redirect_to recipes_path
     else
         render 'new'
     end
